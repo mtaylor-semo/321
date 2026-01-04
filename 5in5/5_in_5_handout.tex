@@ -1,0 +1,156 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper]{memoir}
+
+%\geometry{showframe} % display margins for debugging page layout
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in, right=2.75in, marginparsep=0.2in}                   
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/321/5in5/}}%
+
+%\usepackage{amsmath}  % extended mathematics
+%\usepackage{booktabs} % book-quality tables
+%\usepackage{siunitx}
+%\usepackage{multicol} % multiple column layout facilities
+\usepackage{hyperref}
+
+% Get the year 
+\usepackage{datenumber}
+\newcounter{decade}
+\setcounter{decade}{\thedateyear}
+\addtocounter{decade}{-10}
+
+
+\setlength\fboxsep{0pt}
+
+\newcounter{slidenum}
+\setcounter{slidenum}{1}
+
+\newcommand\showslide{%
+  \clearpage
+  \begin{center}
+    \framebox{\includegraphics[page=\arabic{slidenum},width=\textwidth]{assertion_slides.pdf}}
+    \stepcounter{slidenum}
+  \end{center}
+}
+
+\sideparmargin{outer}
+
+\newcommand{\insertslide}[2]{%
+  \framebox{\includegraphics[page=#1,width=0.95\textwidth, trim=0in 0in 0in 0in, clip]{#2}}
+}
+
+\usepackage[sc]{titlesec}
+
+
+\usepackage{fancyhdr}
+	\setlength{\headheight}{14.5pt}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\footnotesize pg. \thepage }
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\lhead{\textsc{by} 321: Evolution}
+	\rhead{5 in 5: Guidelines and tips}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+%\title{5 in 5 Presentation}
+%\author{Guidelines and Tips}
+
+%\date{} % without \date command, current date is supplied
+
+\begin{document}
+\thispagestyle{plain}
+%\maketitle	% this prints the handout title, author, and date
+
+%\sidepar{BI 348, Marine Biology.} 
+
+%\begin{marginfigure}[1\baselineskip]
+
+%\end{marginfigure}
+
+\subsubsection*{5 in 5 presentation: Guidelines and Tips}
+
+You are required to give a five minute presentation using only five slides as part of your grade for Evolution. I have three reasons for this requirement. First, you will gain in-depth knowledge about one particular aspect of evolutionary biology. In fact, you will probably gain more insight than what you share with the class.  Second, you benefit by learning how to give concise, effective presentations. Third, you always benefit through practice. The more presentations you give, the better you get. The requirements I provide here will help you to think carefully about what you want to say and how you need to say it clearly and concisely.
+
+{\sideparvshift=-\baselineskip\sidepar{\insertslide{1}{5_in_5_overview.pdf}}}
+
+An important aspect for me is to teach you how to give effective presentations. One of the best ways to give effective presentations is to avoid the default settings and templates provided by PowerPoint and Keynote. The default layout of the slide templates encourages designs that are not informative. At the top of the slide is a short, centered phrase that is usually not very informative. The rest of the slide is filled with a list of bullet points, containing anything from 5--7 word phrases to long sentences. PowerPoint provides four sublevels for each bullet point. Many people use them but unintentionally bury important information on a third or fourth level. Buried information is not informative. You want your audience to learn from you instead of trying to figure out what is important.
+
+%\subsection*{Choose a topic.}
+%
+%\sideparvshift=5.5\baselineskip\sidepar{\insertslide{2}{5_in_5_overview.pdf}}
+%Throughout this course, we will cover major marine ecosystems, such as estuaries, coral reefs, and the deep sea.  You will be assigned one of these ecosystems through random draw.  You will then choose a very specific topic within that category. Your topic may be related to the ecosystem or to an organisms that lives in that ecosystem.  For example, seahorses are found in seagrass beds of estuaries so you may choose seahorses as your topic.  You must be very specific because you will not otherwise be able to cover the material effectively. The biology of seahorses is too broad but mating in seahorses is specific enough to cover in five minutes.
+
+\subsection*{Choose a scientific paper.}
+
+Your presentation will highlight scientific research published in a scientific journal. The research you choose must be related to some aspect of evolutionary biology. Choose a paper that presents a clear hypothesis, tests the hypothesis, and provides a clear conclusion.  The paper must be published during the past 10 years (\thedecade~to present).
+
+%\subsection*{You have five slides to make five points.}
+%
+%\sideparmargin{outer}
+%\sidepar{\insertslide{5}{5_in_5_overview.pdf}}
+%You have a \emph{strict} limit of five slides to make specific five points related to your topic. Each slide may not contain more than \emph{one} brief sentence. In most cases, you will include a single sentence on each slide to make a key point. If you use a table or graph, you choose to not include a sentence. The figure or table may be sufficient to stand alone.  You must do more than read the sentence on the slide. Your job as speaker is to expand on the information contained in the brief sentence. 
+% 
+\subsection*{You have five slides.}
+
+You must cover the essential aspects of your chosen paper. You must cover the introduction, the results, and the discussion. \emph{Do not cover the materials and methods.} Use no more than two slides for any one of the three sections, and no more than five slides in total. For example, you can use two slides to introduce the background and hypothesis, two slides for the results, and one for the discussion; or, you can use one slide for the introduction, two for the results, and one for the discussion.
+
+You may use a sixth slide as a title side. I will not count this as one of your five slides. However, you must not talk about your title slide. You do not need to say the title of your talk. Your audience can read the title. This is part of learning to be an effective presenter. Do not tell your audience what they already know. Your goal is to tell them something they do not already know.
+
+\subsection*{You have five minutes.}
+
+\sideparmargin{outer}
+
+Your presentation must last at least 4.5 minutes and no more than 5.5 minutes. I will cut your presentation off after 5.5 minutes has elapsed. I will use a timer. When the timer alarm sounds, your time is up. The purpose here is two-fold. First, I must constrain the time to allow all students a chance to present. Plus, your presentation is over very quickly. Second, professional presentations are almost always constrained to a short time frame. You will gain experience learning how to say what you need to say in a brief period of time.  The five minutes begins the moment you start talking about your first slide. \sidepar{\insertslide{3}{5_in_5_overview.pdf}}
+
+If your presentation is too short or too long, you will lose 5 points (10\% of the total possible points).
+
+\subsection*{Practice. Practice. Practice.}
+
+
+You must practice early and often. I cannot stress this enough. Presenting clear information in a very concise way is not an easy task, even for the most practiced and natural speakers. The only way you will be able to present all of your information in five minutes is through regular practice. You must know exactly what you want to say for each slide. You must eliminate extraneous words. You must avoid “Umm” and “Ahhh.” You say exactly what you need to say. Nothing more. \sidepar{\insertslide{8}{5_in_5_overview.pdf}}
+
+\subsection*{Use a consistent theme and supporting figures.}
+
+
+Use a consistent format for your slides. Use only one font (preferably, a sans-serif font such as Arial or Helvetica) and one size. Use 24 or 28 point font size so that your text is clearly visible at the back of the room. Black or white text is usually best but you may use color judiciously. You do not want to change colors constantly among your slides. Thus, you should choose a color scheme that works with all of your slides. 
+
+% Use figures (or table, if suitable) that support the point of the slide. 
+
+Use figures and tables from your chosen paper to show results. I can help you extra figures from the publication if you need help. Use other supporting images for the introduction and discussion slides.\sidepar{\insertslide{9}{5_in_5_overview.pdf}} 
+Do not include random figures. Humans are visual creatures. We process visual information very quickly. So, supporting images will help your audience understand the point of your slide.  Use high-resolution, “full-bleed” images. A full-bleed image is one that fills the entire frame of the slide.  If you use the standard PowerPoint slide dimensions of 4:3 (width:height ratio), then you can use images that are 1024 pixels wide and 768 pixels high. You can also use 800\times 600 pixel images because they fit the 4:3 ratio. If you use the widescreen format (16:9), then you should use images of the same ratio (e.g., 1600\times 900 pixels, 1365\times 768 pixels, etc.). Try to use images that are 300 dots per inch as they will appear sharper. You should use no less than 72 dots per inch.
+
+You \emph{must not} stretch images in different directions to fit the slide. You can scale an image to fit the slide if it has the proper ratio (e.g., scaling an 800\times 600 pixel image up to 1024\times 768 pixels). An image that is 800\times 500 pixels however, is not in the proper ratio. It will not fill the screen.  Try to avoid these types of images.  If you have an image that is absolutely perfect for your talk but is not in the proper ratio, contact me \emph{well in advance} of your talk. I may be able to help you get the image into a suitable format.
+
+Do not use images that have watermarks on them. It is OK to leave a small copyright notice in place. \sidepar{\insertslide{15}{5_in_5_overview.pdf}}
+
+\subsection*{Use non-copyright images and give credit.}
+
+
+Use non-copyright images whenever possible. The internet has many source of images that are copyright-free or licensed through Creative Commons. These include Wikimedia Commons and \emph{some} Flickr accounts. All Wikimedia/Wikipedia images are Creative Commons and free for use. If you browse Flickr accounts, be sure the image is listed as “Some Rights Reserved” or ``Public Domain.'' If the image is listed as “All Rights Reserved,” do not use the image without the permission of the author. NOAA also has a Flickr account and a photo library with many high-quality images. I will include links to their photo library and Flickr account on the course website.
+
+Use \url{http://search.creativecommons.org} for an easy way to find Creative Commons images. It is a search engine that allows you to enter terms. Look for images from Flickr and Wikipedia as the places with the best chances of finding good photos.
+
+You must include credit for the source of your images or tables that you use.  This is not only a stipulation of Creative Commons, it is proper legal form. If you must use a copyrighted image or table (such as one from a scientific publication), include the copyright symbol and source of the image or table.  I can help you if you are not sure how to do this. \sidepar{\insertslide{17}{5_in_5_overview.pdf}}
+
+\subsection*{Grading and Due Dates.}
+
+
+This assignment is worth 20\% of your course grade. I will post a separate grading rubric online. The rubric will contain a breakdown of the how you will earn points for this assignment. If you follow the rubric carefully then you should do fine. See the assignment drop box for the due date. %My plan is for groups of students to give presentations at the end of each ecosystem unit.  Therefore, different groups of students will have different due dates. I will give you your due date before we start a particular unit.  However, I reserve the right to change this format. If necessary, I will have all students give their presentations near the end of the semester. I would rather spread them out but various logistics may dictate otherwise.
+
+\end{document}

@@ -1,0 +1,160 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}
+
+\usepackage[left=0.75in,right=0.5in,top=0.75in,bottom=0.75in]{geometry} 
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmainfont[Ligatures={Common}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hanging}
+
+\newlength{\mylength}
+\settowidth{\mylength}{\small{7.}}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+
+\begin{document}
+\begin{landscape}
+{\small%
+\begin{longtable}[l]{@{}L{7cm}L{3cm}L{3cm}L{3cm}L{3cm}L{3cm}@{}}
+\caption*{Presentation rubric for Evolution (\textsc{by}~321).\hfill Speaker: \rule{2in}{0.4pt}\hfill Score: \rule{1in}{0.4pt}}\\
+\toprule
+Content Areas & Unsatisfactory\newline (0~points) & Borderline\newline (4~points) & Satisfactory\newline (6~points)& Good\newline (8~points) & Outstanding\newline (10~points)  \\ 
+\midrule
+%\endfirsthead
+%\toprule
+%Content Areas & Unsatisfactory (0 points) & Borderline (5 points) & Satisfactory (9 points) & Outstanding (12 points) & Score\\ 
+%\midrule
+\endhead
+%% Row 1
+\textbf{Scientific content:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Information accurately represented the study or studies. 
+\item Information accurately covered the introduction, results, and discussion.
+\end{enumerate}&%
+What is science? &%
+All slides had minor to major errors. &%
+At least one slide meets all criteria but majority of minor flaws or one slide with major flaw. &%
+Minor flaws on 1–2 slides &
+Perfect in every way.%
+\\[-1em]
+\midrule
+%% Row 2
+\textbf{Knowledge and delivery:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+	\item Student showed clear mastery of the material.
+	\item Student spoke clearly at a suitable volume.
+	\item Made consistent eye contact with audience.
+	\item Student answered questions effectively.
+\end{enumerate}&%
+What is knowledge? &%
+Majors errors in two or more criteria. &%
+Student meets all criteria but majority of minor flaws or one criterion with major flaw. &%
+Minor flaws in knowledge or delivery.&%
+Perfect in every way.%
+\\[-1em]
+\midrule
+%% Row 3
+\textbf{Narration:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item One complete sentence. %
+\item Sentence makes one clear point.%
+\item Sentence supported by image.%
+\item Sentences were legible over image.
+\end{enumerate}&%
+What is a sentence? &%
+All slides had minor to major errors. &%
+At least one slide meets all criteria but majority of minor flaws or one slide with major flaw. &%
+Minor flaws on 1–2 slides.&%
+Perfect in every way.%
+\\[-1em]
+\midrule
+
+%% Row 4
+\textbf{Image quality:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Pictures filled slides or tastefully cropped to suit a purpose.%
+\item No signs of image stretching.%
+\item High resolution slides with no pixelation.%
+\end{enumerate}&%
+What is an image? &%
+All slides had minor to major errors. &%
+At least one slide meets all criteria but majority of minor flaws or one slide with major flaw. &%
+Minor flaws on 1–2 slides.&%
+Perfect in every way.%
+\\[-1em]
+\midrule
+	& Unsatisfactory\newline (0~points) & Borderline\newline (1~point) & & Good\newline (3~points) 	& Outstanding\newline (5~points) \\
+\midrule
+%% Row 5
+\textbf{Image source:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+\item Citations included on all slides.%
+\item Images not from the scientific paper were public domain or licensed by creative commons.%
+\item Citations were legible over image but discrete (not too large or too small).%
+\end{enumerate}&%
+What is a non-copyrighted image? &%
+Most slides had minor to major errors. &%
+&
+Minor flaws on 1–2 slides. &%
+Perfect in every way. %
+\\[-1em]
+\midrule
+%% Row 6
+\textbf{Grammar:}\par%
+\vspace{-0.5\baselineskip}
+\begin{enumerate}[itemsep=-0.25\baselineskip,align=left, leftmargin=*]
+	\item Slides did not contain typographical errors.%
+	\item Slides had complete sentences with suitable punctuation.%
+\end{enumerate}&%
+I ain't got no good grammar. &%
+Most slides had minor to major errors. &%
+&
+Minor flaws on 1–2 slides. &%
+Perfect in every way. %
+\\[-1em]
+%\midrule
+% & & & & \vspace{0.5in}\par\hfill\normalsize{Total Score\phantom{m}} & \\
+\bottomrule
+\end{longtable}
+}%End small font size
+Presentations less than 4.5 or more than 5.5 minutes will result in a loss of 5 points on top of any other deductions. No presentation will be allowed to extend beyond 5 minutes 30 seconds. Practice.
+
+\medskip
+
+You must attend all presentations. You will lose 2 points per missed presentation (approximately 10~points per day).
+
+\end{landscape}
+
+
+\end{document}
